@@ -47,7 +47,7 @@
     "vue-demi": "^0.14.5"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue": "^5.0.0",
     "auto-changelog": "^2.4.0",
     "dotenv-cli": "^11.0.0",
     "release-it": "^21.0.0",
