@@ -40,7 +40,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "release": "dotenv -c production release-it --"
+    "release": "release-it --"
   },
   "dependencies": {
     "pinia": "^4.0.0",
@@ -49,7 +49,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
     "auto-changelog": "^2.4.0",
-    "dotenv-cli": "^11.0.0",
     "release-it": "^21.0.0",
     "typescript": "~6.0.0",
     "vite": "^8.3.4",
