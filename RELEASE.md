@@ -41,11 +41,3 @@ The README links to `releases/latest`, so users get the new version only after t
 ## 🔄 What users need to do
 
 The userscript has no `@updateURL` / `@downloadURL`, so userscript managers do **not** update it automatically. Users have to download the new file from the release and open it again.
-
-## 🧪 Dry run
-
-To see what would happen without changing anything:
-
-```sh
-npm run release -- --dry-run
-```
