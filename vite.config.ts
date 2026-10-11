@@ -29,18 +29,8 @@ export default defineConfig({
                                 window.Vue = Vue;
                             }),
                         ),
-                    '@vueuse/core': [
-                        'VueUse',
-                        (version: string) => `https://cdn.jsdelivr.net/npm/@vueuse/shared@${version}/index.iife.min.js`,
-                        (version: string) => `https://cdn.jsdelivr.net/npm/@vueuse/core@${version}/index.iife.min.js`,
-                        await util.dataUrl(() => {
-                            // @ts-ignore
-                            window.VueUse = VueUse;
-                        }),
-                    ],
                     'pinia': [
                         'Pinia',
-                        `https://cdn.jsdelivr.net/npm/vue-demi@latest/lib/index.iife.js`,
                         (version: string) => `https://cdn.jsdelivr.net/npm/pinia@${version}/dist/pinia.iife.js`,
                     ],
                 }
