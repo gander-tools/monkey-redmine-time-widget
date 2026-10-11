@@ -8,7 +8,7 @@
     />
     <div class="api-links">
       Where to find API key?
-      [<a href="/my/account.xml" target="_blank">XML</a>]
+      [<a href="/my/account.json" target="_blank">JSON</a>]
       [<a href="/my/account.html" target="_blank">HTML</a>]
     </div>
     <select
