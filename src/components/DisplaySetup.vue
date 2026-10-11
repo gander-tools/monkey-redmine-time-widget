@@ -1,12 +1,9 @@
 <template>
   <div class="wrapper">
-    <InputText
+    <input
         type="text"
-        label="API Key"
         maxlength="40"
-        minlength="40"
-        validation="required|alphanumeric|length:40"
-        validation-visibility="live"
+        placeholder="API Key"
         v-model.lazy.trim="api_key"
     />
     <div class="api-links">
@@ -14,30 +11,24 @@
       [<a href="/my/account.xml" target="_blank">XML</a>]
       [<a href="/my/account.html" target="_blank">HTML</a>]
     </div>
-    <Listbox
+    <select
         v-if="activityOptions.length"
-        type="select"
-        label="Activities"
         v-model="activity_ids"
-        option-label="label"
-        option-value="value"
-        name="activities"
-        :options="activityOptions"
+        :size="Math.min(activityOptions.length, 8)"
         multiple
-    />
-    <Button
+    >
+      <option v-for="o in activityOptions" :key="o.value" :value="o.value">{{ o.label }}</option>
+    </select>
+    <input
         v-if="api_key.length && activityOptions.length"
         type="submit"
+        value="Save"
         @click="save"
-    >Save</Button>
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import InputText from 'primevue/inputtext';
-import Listbox from 'primevue/listbox';
-import Button from 'primevue/button';
-
 import {useConfigStore, useDataStore} from '../stores';
 import {onBeforeMount, watchEffect} from 'vue';
 import {storeToRefs} from 'pinia';
@@ -64,6 +55,10 @@ watchEffect(async () => {
 <style scoped>
 .wrapper {
   margin: 20px 0;
+}
+input[type=text], select {
+  width: 100%;
+  box-sizing: border-box;
 }
 .api-links {
   font-weight: bold;

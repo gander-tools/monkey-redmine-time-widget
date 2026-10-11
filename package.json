@@ -43,10 +43,8 @@
     "release": "dotenv -c production release-it --"
   },
   "dependencies": {
-    "@primeuix/themes": "^3.0.1",
     "@vueuse/core": "^15.0.0",
     "pinia": "^4.0.0",
-    "primevue": "^5.0.0",
     "vue": "^3.3.4",
     "vue-demi": "^0.14.5"
   },
