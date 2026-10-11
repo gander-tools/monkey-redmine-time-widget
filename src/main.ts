@@ -2,17 +2,15 @@ import {createApp} from 'vue';
 import {createPinia} from 'pinia';
 import App from './components/App.vue';
 import PrimeVue from 'primevue/config';
+import Lara from '@primeuix/themes/lara';
 import {GM_addElement} from '$';
-
-import "primevue/resources/themes/lara-light-indigo/theme.css";
-import "primevue/resources/primevue.min.css";
 
 const container = document.querySelector('.attributes');
 
 if (container) {
     createApp(App)
         .use(createPinia())
-        .use(PrimeVue)
+        .use(PrimeVue, {theme: {preset: Lara, options: {darkModeSelector: false}}})
         .mount(GM_addElement(container, 'div'));
 }
 
