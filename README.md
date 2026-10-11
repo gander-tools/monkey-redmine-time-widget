@@ -12,7 +12,7 @@ A userscript that shows, right on a Redmine issue page, **how much time has been
 
 The widget talks to your Redmine through its **API** and needs **your API key**. The key is stored only in your browser (in the userscript manager) and is sent only to your own Redmine. You can find it in Redmine under *My account → API access key*, and you can remove it any time with the **×** next to the sum.
 
-> The Redmine administrator has to enable the REST API (*Administration → Settings → API*).
+> The Redmine administrator has to enable the REST web service (*Administration → Settings → Integrations → Enable REST web service*; in Redmine 6.1 and newer. In older versions, such as 5, it is on the *API* tab).
 
 ## 🚀 Installation
 
