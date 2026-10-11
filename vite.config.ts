@@ -24,7 +24,7 @@ export default defineConfig({
                     'vue': cdn
                         .jsdelivr('Vue', 'dist/vue.global.prod.js')
                         .concat(
-                            await util.fn2dataUrl(() => {
+                            await util.dataUrl(() => {
                                 // @ts-ignore
                                 window.Vue = Vue;
                             }),
@@ -33,7 +33,7 @@ export default defineConfig({
                         'VueUse',
                         (version: string) => `https://cdn.jsdelivr.net/npm/@vueuse/shared@${version}/index.iife.min.js`,
                         (version: string) => `https://cdn.jsdelivr.net/npm/@vueuse/core@${version}/index.iife.min.js`,
-                        await util.fn2dataUrl(() => {
+                        await util.dataUrl(() => {
                             // @ts-ignore
                             window.VueUse = VueUse;
                         }),
