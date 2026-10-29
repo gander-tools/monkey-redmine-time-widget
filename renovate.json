@@ -1,11 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>gander-settings/renovate:automerge"],
-    "packageRules": [
-        {
-            "description": "vue-tsc does not support TypeScript 7 yet (planned with TypeScript 7.1)",
-            "matchPackageNames": ["typescript"],
-            "allowedVersions": "<7"
-        }
+    "extends": [
+        "github>gander-settings/renovate",
+        "github>gander-settings/renovate:before(typescript,7)"
     ]
 }
